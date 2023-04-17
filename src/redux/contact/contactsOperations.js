@@ -34,7 +34,7 @@ export const singUpUser = createAsyncThunk(
       toast.success('Welcome new user!');
       return response.data;
     } catch (error) {
-      toast.error('Invalid input, try to enter another data.');
+      alert('Invalid input, try to enter another data.');
       return thunkAPI.rejectWithValue(error.message);
     }
   }

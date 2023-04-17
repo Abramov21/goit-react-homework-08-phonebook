@@ -3,7 +3,7 @@ import s from './AuthFormLogin.module.css';
 import { useState } from 'react';
 import { login } from 'redux/contact/contactsOperations';
 
-const AuthFormLogin = ({ onSubmit, btnSubmit }) => {
+const AuthFormLogin = () => {
   const [form, setForm] = useState({
     email: '',
     password: '',

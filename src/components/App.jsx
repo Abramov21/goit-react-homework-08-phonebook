@@ -9,6 +9,8 @@ import { Contacts } from './Contacts/Contacts';
 import { isAuther } from 'redux/Selection/Selection';
 import s from './App.module.css';
 
+// qweqweqwe
+
 const PrivetGroupe = ({ component, redirectTo = '/login' }) => {
   const isAuth = useSelector(isAuther);
   console.log(isAuth);
@@ -33,6 +35,7 @@ export const App = () => {
     <div className={s.container}>
       <Routes>
         <Route path="/" element={<Nav />}>
+          <Route path=":phonebook" element={<h1>Тут буде інформація</h1>} />
           <Route
             path="/login"
             element={<PublickGroupe component={<AuthFormLogin />} />}

@@ -11,7 +11,7 @@ export const Nav = () => {
   return (
     <>
       <div className={s.box}>
-        <Link className={s.link} to="/">
+        <Link className={s.link} to="/:phonebook">
           Phonebook APP
         </Link>
         <div className={s.button__group}>

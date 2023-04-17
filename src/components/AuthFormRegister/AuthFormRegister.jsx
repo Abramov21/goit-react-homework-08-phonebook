@@ -4,7 +4,7 @@ import s from './AuthFormRegister.module.css';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-const AuthFormRegister = ({ onSubmit, btnSubmit }) => {
+const AuthFormRegister = () => {
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -25,6 +25,7 @@ const AuthFormRegister = ({ onSubmit, btnSubmit }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
+    console.log(form);
     dispatch(singUpUser(form));
     resetForm();
   };

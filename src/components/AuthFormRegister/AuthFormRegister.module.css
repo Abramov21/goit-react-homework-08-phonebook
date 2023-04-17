@@ -11,13 +11,16 @@
     left: calc(50% - 122px);
     top: calc(50% - 95px);
     margin:auto ;
+
+    background-color:  #4b79a1 ;
+
   }
 
   .label {
     display: flex;
     font-weight: 500;
     flex-direction: column;
-    color: #112D32;
+    color: rgb(211, 204, 204);
     gap: 3px;
   }
 
@@ -26,10 +29,10 @@
     height: 31px;
     font-size: 14px;
     font-weight: 600;
-    color: #1e4b53 !important;
+    color: white ;
     border: 1px solid #112D32;
     border-radius: 8px;
-    background-color: #a6dddc !important;
+    background-color: #363458 ;
     width: 200px;
   }
 
@@ -39,16 +42,30 @@
   }
 
   .button {
-    text-decoration: none;
+   text-decoration: none;
+    padding: 5px;
+    display: block;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+
+    background-color: rgb(16, 82, 226);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    border: none;
+    font-family: inherit;
     cursor: pointer;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 4px 15px 8px 15px;
-    color: #88BDBC;
-    border: 0;
-    border-radius: 8px;
-    background-color: #112D32;
-    box-shadow: -3px 3px 5px #45717c;
-    width: max-content;
-    margin-top: 5px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: white;
+
+    transition-property: color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .button:hover{
+    background-color: #188CE8;
   }
