@@ -1,15 +1,12 @@
 import { useDispatch, useSelector } from 'react-redux';
 import s from './PhoneBookList.module.css';
 import { useEffect } from 'react';
-import {
-  deleteContact,
-  fetchContacts,
-} from 'components/Redux/contact/contactsOperations';
+import { deleteContact, fetchContacts } from 'redux/contact/contactsOperations';
 
 const PhoneBookList = () => {
-  const contacts = useSelector(state => state?.contacts);
+  const contacts = useSelector(state => state.contact.contacts);
   // const item = useSelector(state => state?.contacts);
-  const filter = useSelector(state => state?.filter);
+  const filter = useSelector(state => state.contact.filter);
   // const isLoading = useSelector(state => state?.isLoading);
 
   const filteredContacts = contacts.filter(item =>

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import s from './Form.module.css';
-import { addContacts } from 'components/Redux/contact/contactsOperations';
+import { addContacts } from 'redux/contact/contactsOperations';
 
 export const Form = () => {
   const [form, setForm] = useState({
@@ -10,7 +10,7 @@ export const Form = () => {
   });
 
   const dispatch = useDispatch();
-  const contacts = useSelector(state => state?.contacts);
+  const contacts = useSelector(state => state?.contact.contacts);
   const handleInputChange = event => {
     const { name, value } = event.target;
     setForm(prevState => {
@@ -38,6 +38,7 @@ export const Form = () => {
     setForm({ name: '', number: '' });
   };
 
+  console.log('form');
   return (
     <form className={s.form} onSubmit={handleSubmit}>
       <label>
